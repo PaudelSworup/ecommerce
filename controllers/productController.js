@@ -2,6 +2,7 @@ const Product = require("../models/productModel");
 
 // to store product
 exports.postProduct = async (req, res) => {
+  console.log(req.file.path)
   let product = new Product({
     product_name: req.body.product_name,
     product_price: req.body.product_price,

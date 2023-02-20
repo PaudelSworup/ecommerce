@@ -49,7 +49,7 @@ exports.userRegister = async (req, res) => {
       // send mail
       const url = `${process.env.URL}/confirmation/${token.token}`
       sendEmail({
-        from: "no-reply@expresscommerce.com",
+        from: "no-reply@expresscommerce.com", 
         to: user.email,
         subject: "Email verification link",
         // text: `hello, \n\n please verify your account by clicking below link: \n\n http:\/\/${req.headers.host}\/api\/confirmation\/${token.token}`, //http://localhost:8000/api/confirmation/3353#6q3,
